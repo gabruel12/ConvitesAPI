@@ -1,7 +1,7 @@
 
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from rest_framework.simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class UserCadasterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
@@ -18,7 +18,7 @@ class UserCadasterSerializer(serializers.ModelSerializer):
         )
         return user
 
-class LoginUser(TokenObtainPairSerializer):
+class LoginUserSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
