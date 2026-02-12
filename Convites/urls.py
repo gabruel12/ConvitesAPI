@@ -3,5 +3,5 @@ from .views import CreateConvite, DeleteConvite
 
 urlpatterns = [
     path("create/convite/", CreateConvite.as_view(), name="create-convite"),
-    path("delete/convite/", DeleteConvite.as_view(), name="delete-convite")
+    path("delete/convite/<int:id>/", DeleteConvite.as_view(), name="delete-convite")
 ]
