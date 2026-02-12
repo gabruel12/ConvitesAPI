@@ -4,4 +4,5 @@ from django.urls import include
 
 urlpatterns = [
     path('api/', include('AuthJWT.urls')),
+    path('api/', include('Convites.urls')),
 ]
