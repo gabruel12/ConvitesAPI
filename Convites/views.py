@@ -3,7 +3,7 @@ from .serializers import ConvitesSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.generics import DestroyAPIView, CreateAPIView
+from rest_framework.generics import DestroyAPIView, CreateAPIView, UpdateAPIView
 from .models import Convites
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.permissions import BasePermission
@@ -24,3 +24,9 @@ class DeleteConvite(DestroyAPIView):
     serializer_class = ConvitesSerializer
     permission_classes = [IsAuthenticated, IsOwer]
     lookup_field = 'id'
+
+class EditConvite(UpdateAPIView):
+    queryset = Convites.objects.all()
+    serializer_class = ConvitesSerializer
+    permission_classes = [IsAuthenticated, IsOwer]
+    lookup_field = "id"

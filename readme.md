@@ -1,5 +1,6 @@
 
-API que faça usuarios poderem montar um convite para casamento/festas.
+# API para qualquer um fazer um convite online para festas, casamentos, eventos!
 
-sistema de usuarios | JWT
-sistema de convites | SQL
+A ideia era essa, conta com 1 API REST de convites e, um login com JWT Token
+
+Fiz só pra passar o tempo.
